@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="36px"
+   height="36px"
+   viewBox="-4 0 36 36"
+   version="1.1"
+   id="svg16"
+   sodipodi:docname="selfPointer.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="18.333333"
+     inkscape:cx="13.881818"
+     inkscape:cy="17.972728"
+     inkscape:window-width="950"
+     inkscape:window-height="900"
+     inkscape:window-x="960"
+     inkscape:window-y="31"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g10" />
+  <!-- Uploaded to SVGRepo https://www.svgrepo.com -->
+  <title
+     id="title2">map-marker</title>
+  <desc
+     id="desc4">Created with Sketch.</desc>
+  <defs
+     id="defs6" />
+  <g
+     id="map-marker"
+     transform="translate(-10,-6)"
+     style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1">
+    <g
+       transform="translate(10,6)"
+       id="g10">
+      <path
+         id="Shape"
+         d="M 18 0 C 10.268 -1.1842379e-15 4 5.6406094 4 12.599609 C 4 24.063609 18 36 18 36 C 18 36 32 23.962609 32 12.599609 C 32 5.6406094 25.732 0 18 0 z M 18 7 A 7 7 0 0 1 25 14 A 7 7 0 0 1 18 21 A 7 7 0 0 1 11 14 A 7 7 0 0 1 18 7 z "
+         style="fill:#ff00ff"
+         transform="translate(-4)" />
+      <circle
+         id="Oval"
+         fill="#0c0058"
+         fill-rule="nonzero"
+         cx="14"
+         cy="14"
+         r="7"
+         style="fill:#ff00ff;fill-rule:evenodd;stroke:none;stroke-width:1;opacity:0.1" />
+    </g>
+  </g>
+  <metadata
+     id="metadata188">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>map-marker</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

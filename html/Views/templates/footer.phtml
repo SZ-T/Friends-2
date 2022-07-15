@@ -1,0 +1,25 @@
+        </div>
+        <footer class="footer column is-narrow">
+            <div class="content has-text-centered">
+                <p>
+                    Made by <strong>Shimon Travers</strong>.
+                </p>
+                <p>
+                    Last updated on <strong><em>Friday 15<sup>th</sup> July 2022</em></strong>
+                </p>
+            </div>
+        </footer>
+        <?php 
+        if(isset($view->footer)) {
+            foreach ($view->footer as $script) {
+                echo $script;
+            }
+        }
+
+        // If logged in, include script to update badge number
+        if(isset($_SESSION['id'])){
+            echo '<script src="js/ajaxFriendBadge.js"></script>';
+        }
+        ?>
+    </body>
+</html>

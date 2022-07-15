@@ -1,0 +1,47 @@
+<?php
+
+$view->header = '<link rel="stylesheet" href="css/ol.css"><script src="js/ol.js"></script>';
+
+require_once ("templates/header.phtml");
+
+?>
+
+<div id="friends-list" class="column box is-narrow m-3 table-container">
+    <div class="title has-text-centered">My Friends</div>
+    <div class="tabs is-centered is-toggle">
+        <ul>
+            <li class="is-active"><a>Current Friends</a></li>
+            <li>
+                <a href="friendRequests.php">
+                    <span class="badge is-info is-outlined is-right" hidden></span>
+                    Friend Requests
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <?php require_once("Views/templates/table.phtml"); ?>
+
+</div>
+
+
+<div class="column box m-3">
+    <div id="map" class="map"></div>
+    <div id="popup" class="ol-popup">
+        <div id="popup-content" class="box has-text-centered"></div>
+    </div>
+</div>
+
+<?php
+
+// Initiate map, pointers, pointer auto-refresh and SVG images to reduce requests
+$view->footer[] = '<script src="js/Map.js"></script>
+                <script src="js/Pointer.js"></script>
+                <script src="js/ajaxMap.js"></script>
+                <script>
+                new Pointers(token)
+                </script>';
+
+require_once ("templates/footer.phtml");
+
+?>

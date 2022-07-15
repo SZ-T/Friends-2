@@ -1,0 +1,79 @@
+<form action="">
+    <div class="columns is-centered">
+        <div class="column is-narrow">
+            <div class="field">
+                <div class="control">
+                    <input id="search" class="input field" type="text" placeholder="Search..." autocomplete="off">
+                </div>
+            </div>
+        </div>
+        <?php if (isset($_SESSION["id"])): ?>
+            <div class="column is-narrow">
+                <div class="select">
+                    <select id="sort">
+                        <?php
+                        // Create sort select options
+                        foreach (['Username [A-Z]','Username [Z-A]','First name [A-Z]','First name [Z-A]','Surname [A-Z]','Surname [Z-A]'] as $value) {
+                            (new SearchParams())->option('sort', $value);
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
+        <?php endif ?>
+    </div>
+</form>
+
+<?php
+    // If friends page, create 'Show All' and 'Hide All' buttons
+    if($_SERVER['PHP_SELF'] == "/friends.php"){
+        echo '<div class="has-text-centered">';
+        echo '<td class="is-vcentered"><a class="button is-info m-3" onclick="pointers.showAll()">Show All</a></td>';
+        echo '<td class="is-vcentered"><a class="button is-info m-3" onclick="pointers.hideAll()">Hide All</a></td>';
+        echo '</div>';
+    }
+?>
+
+<table class="table is-striped is-hoverable is-narrow is-fullwidth">
+    <thead>
+    <tr>
+        <?php
+        if (isset($_SESSION["id"])) {
+            echo '<th></th>
+                <th>Username</th>
+                <th>Name</th>';
+                if($_SERVER['PHP_SELF'] == "/friends.php"){
+                    echo '<th></th>';
+                }
+                echo '<th></th>';
+        } else {
+            echo '<th></th>
+                <th>Username</th>';
+        }
+        ?>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot></tfoot>
+</table>
+
+<?php
+
+    // Set the CSRF token
+    $view->footer[] = '<script>var token = "'.$_SESSION["ajaxToken"].'";</script>';
+
+    $view->footer[] = '<script src="js/liveSearch.js"></script>
+    <script src="js/ajaxUsers.js"></script>
+    <script src="js/infiniteScroll.js"></script>';
+
+    // Certain pages only show Accepted or Pending relations
+    if($_SERVER['PHP_SELF'] == "/friends.php") {
+        $view->footer[] = '<script>let mode = "Accepted";</script>';
+    } elseif($_SERVER['PHP_SELF'] == "/friendRequests.php") {
+        $view->footer[] = '<script>let mode = "Pending";</script>';
+    } else {
+        $view->footer[] = '<script>let mode = "";</script>';
+    }
+
+?>

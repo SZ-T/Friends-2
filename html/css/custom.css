@@ -1,0 +1,41 @@
+form.login {
+    width: 23em;
+}
+
+#url {
+    display: none;
+}
+
+table {
+    min-width: 20em;
+}
+
+.map {
+    height: 85vh;
+}
+
+#friends-list {
+    max-height: 88vh;
+    overflow: scroll;
+}
+
+#popup-content {
+	position: relative;
+	background: #ffffff;
+	border-radius: .4em;
+    margin-bottom: 20px;
+}
+
+#popup-content:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #ffffff;
+	border-bottom: 0;
+	margin-left: -20px;
+	margin-bottom: -20px;
+}
