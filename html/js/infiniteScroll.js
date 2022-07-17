@@ -1,5 +1,5 @@
 document.querySelector("body").onload = function(){
-    new InfiniteScroll("ajaxUsers.php", mode, token);
+    new InfiniteScroll("ajax/ajaxUsers.php", mode, token);
     
     // Check if bottom of table is visible on screen
     var observer = new IntersectionObserver(function(entries) {

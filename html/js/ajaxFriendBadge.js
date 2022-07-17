@@ -15,7 +15,7 @@ class FriendBadge {
     // Retrieve number of friends pending
     load() {
         friendBadge.isRunning = true;
-        let url = 'ajaxFriendBadge.php';
+        let url = 'ajax/ajaxFriendBadge.php';
         new AJAX(url, (res)=>{
             friendBadge.processResponse(res);
         });

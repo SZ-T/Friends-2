@@ -8,6 +8,7 @@ if (!isset($_GET['token']) || $_GET['token'] != $_SESSION['ajaxToken']) {
     exit();
 }
 
+set_include_path("..");
 // Choose dataset to use depending on whether user is logged in
 if (isset($_SESSION["id"])) {
     require_once ("Models/FriendsDataSet.php");

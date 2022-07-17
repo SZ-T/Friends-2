@@ -6,6 +6,7 @@ session_start();
 if (!isset($_SESSION["id"])) {
     die();
 }
+set_include_path("..");
 require_once ("Models/User.php");
 
 $latitude = $_GET['latitude'];

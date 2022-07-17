@@ -16,7 +16,7 @@ class Pointers {
     // Fetch updated friends locations
     loadLocations() {
         pointers.isRunning = true;
-        let url = 'ajaxFriendsLocation.php';
+        let url = 'ajax/ajaxFriendsLocation.php';
         let payload = {token:pointers.token}
         new AJAX(url, (res)=>{
             pointers.processResponse(res);

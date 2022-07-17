@@ -17,7 +17,7 @@ class UpdateLocation {
 
     // Send new location
     sendLocation(l) {
-        let url = 'ajaxUpdateLocation.php';
+        let url = 'ajax/ajaxUpdateLocation.php';
         let payload = {latitude:l.coords.latitude,
                         longitude:l.coords.longitude}
         new AJAX(url, ()=>{

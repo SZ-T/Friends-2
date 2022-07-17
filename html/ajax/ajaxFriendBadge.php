@@ -8,6 +8,7 @@ if (!isset($_SESSION["id"])) {
     exit();
 }
 
+set_include_path("..");
 require_once ("Models/FriendsDataSet.php");
 
 $dataset = new FriendsDataSet();

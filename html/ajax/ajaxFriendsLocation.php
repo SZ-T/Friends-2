@@ -8,6 +8,7 @@ if (!isset($_GET['token']) || $_GET['token'] != $_SESSION['ajaxToken'] || !isset
     exit();
 }
 
+set_include_path("..");
 require_once ("Models/UserLocationData.php");
 require_once ("Models/FriendsDataSet.php");
 

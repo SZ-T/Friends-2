@@ -7,6 +7,7 @@ if (!isset($_SESSION["id"])) {
     http_response_code(401);
     exit();
 }
+set_include_path("..");
 require_once ("Models/Friend.php");
 
 // Choose what action the user wants to take

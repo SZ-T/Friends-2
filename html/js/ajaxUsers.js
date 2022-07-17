@@ -1,6 +1,6 @@
 // Send friendship requests
 function sendRequest(type, item, outcome) {
-    let url = 'ajaxRequests.php';
+    let url = 'ajax/ajaxRequests.php';
     let payload = {token:globalThis.token,
                     id:item['id'],
                     action:type}
